@@ -1,0 +1,17 @@
+div{
+background: red;
+margin: 1em; 
+width:100px;
+padding: 1em;
+color: #fff;
+border-radius: 3px;
+}
+.b{
+	height: 100px;
+	background-color: #eee;
+}
+
+#a{
+	height: 100px;
+	background-color: #ccc;
+}

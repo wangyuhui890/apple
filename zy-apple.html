@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- pc端的css -->
+	<link rel="stylesheet" media="(min-width:1024px)" href="./css/pc.css">
+	<!-- pad端css -->
+	<link rel="stylesheet" media="(min-width:768px) and (max-width:1024px)" href="./css/pad.css">
+	<!-- 手机端css -->
+	<link rel="stylesheet" media="(max-width:768px)" href="./css/phone.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./iconfont/iconfont.css">
+	<style>
+		html,body{
+			height:100%;
+		}
+
+		.header{
+			width: 100%;
+			color:#a8a8aa;
+			font-size: 12px;
+			background-color: #444;
+		}
+		.wrap{
+			width: 980px;
+			margin: 0 auto;
+		}
+		.header .adv{
+			height: 40px;
+			text-align: right;
+			line-height: 40px;
+		}
+		.nav{
+			width: 100%;
+		 	background-color:rgba(0,0,0,0.8);
+			position: sticky;
+			top: 0;
+			visibility: visible;
+			z-index:5555;
+		}
+		.nav .nav2{
+			height: 44px;
+			text-align: left;
+			line-height: 44px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.nav .nav2 a{
+			color: #fff;
+		}
+		.nav .nav2 a:hover{
+			text-decoration:none;
+			color: rgb(184, 184, 184)
+		}
+		.one,.two,.three{
+			width: 100%;
+			margin-bottom:12px;
+			background: #fafafa;
+		}
+		.two{
+			background: #f5f5f5;
+		}
+		.three{
+			background: #131218;
+			margin-bottom: 0px;
+		}
+		 .one .wrap,
+		 .two .wrap,
+		 .three .wrap{
+			margin: 0 auto;
+			width: 1068px;
+			height: 580px;
+			position: relative;
+			/*background: pink;*/
+			overflow: hidden;	
+		}
+		.two .wrap{
+			width: 930px;
+		}
+		.three .wrap{
+			width: 1150px;
+		}
+		.one .wz,
+		.two .wz,
+		.three .wz{
+			position: absolute;
+			top:88px;
+			text-align: center;
+			left:0; right: 0;
+		}
+		.two .wz{
+			top:48px;
+		}
+		.three .wz{
+			top:48px;
+			color:#fff;
+		}
+		.one .link,
+		.two .link,
+		.three .link{
+			position: absolute;
+			bottom: 352px;
+			left:0; right: 0;
+			text-align: center;
+			color:rgb(0, 112, 201);
+		}
+		.three .link{
+			color: #fff;
+		}
+		.two .link,
+		.three .link{
+			bottom: 394px;
+		}
+		.one .link a,
+		.two .link a,
+		.four .link a{
+			color:rgb(0, 112, 201);
+			font-size: 18px;
+		}
+		.three .link a{
+			color:#fff;
+			font-size: 18px;
+		}
+		.four .link a{
+			font-size: 14px;
+		}
+		 a:hover{
+			text-decoration:underline;
+		}
+		.one .link a:last-child,
+		.two .link a:last-child,
+		.three .link a:last-child
+		{
+			margin-left:26px;
+		}
+		.one .bj,
+		.two .bj,
+		.three .bj{
+			height: 337px;
+			background: url(./images/1.jpg) 0 0 no-repeat;
+			position: absolute;
+			left: 0; right: 0;
+			bottom: -41px;
+		}
+		.two .bj{
+			background: url(./images/2.jpg) 0 0 no-repeat;
+			height: 355px;
+			top: 225px;
+		}
+		.three .bj{
+			background: url(./images/6.jpg) 0 0 no-repeat;
+			height: 370px;
+			bottom: 0;
+		}
+		.four{
+			width:100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.four ul{
+			width:  1519px;
+	    	display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.four ul li{
+			box-sizing: content-box;
+			width: 48.5%;
+			height: 580px;
+			overflow: hidden;
+		}
+		.four ul>li:nth-child(even){
+			margin: 12px 12px 0px 0;
+		}
+		.four ul>li:nth-child(odd){
+			margin: 12px 0 0px 12px;
+		}
+		.four .wrap{
+			width: 100%;
+			height: 580px;
+			text-align: center;
+			position: relative;
+		}
+		.four .bj{
+			height: 580px;
+			width: 1280px;
+			/*position: relative;*/
+		}
+		.four .wz{
+			position: absolute;
+			width: 100%;
+			height: 152px;
+		}
+		.four h4{
+			width: 430px;
+			height: 45px;
+        	margin:50px auto 0 auto;
+        	font-size: 35px;
+		}
+        .four h5{
+        	width: 430px;
+        	height: 52px;
+        	margin: 4px auto 0 auto;
+        	font-size: 19px;
+        	font-weight: normal;
+        }
+        .four .f_1 .bj{
+			background: url(./images/10.jpg) -250px 0 no-repeat;
+		}
+		.four .f_2 .bj{
+			background: url(./images/11.jpg) -258px 0 no-repeat;
+		}
+		.four .f_3 .bj{
+			background: url(./images/12.jpg) -250px 0 no-repeat;
+		}
+		.four .f_2 .wz
+		{
+			height: 127px;
+			top: 390px;
+		}
+		.four .f_3 .wz{
+			height: 157px;
+			top:360px;
+		}
+		.four .f_2 .wz h4,
+		.four .f_3 .wz h4{
+			color: #fff;
+		}
+		.four .f_3 .wz h5{
+			color: #fff;
+			height: 26px;
+		}
+		.four .f_2 .link,
+		.four .f_3 .link{
+			width: 430px;
+        	height: 25px;
+        	margin: 6px auto 0 auto;
+			color:#fff;
+		}
+		.four .f_2 .link a,
+		.four .f_3 .link a{
+        	color: #fff;	
+        	font-size: 17px;
+        }
+		.four .f_4{
+			background-color: #f9f0eb;
+		}
+		.four .f_4 .bj{
+			background: url(./images/13.jpg) 220px 189px no-repeat;
+		}
+		.four .f_4 .link{
+        	width: 430px;
+        	height: 25px;
+        	margin: 10px auto 0 auto;
+			color:rgb(0, 112, 201);
+        }
+        .four .f_4 .wz{
+			height: 161px;
+        }
+        .four .f_4 h5{
+        	height: 26px;
+        }
+		.four .f_5 .bj{
+			background: url(./images/14.jpg) -265px 0px no-repeat;
+		}
+		.four .f_6 {
+			background-color: #000;
+		}
+		.four .f_6 .bj{
+			background: url(./images/15.jpg) 230px 195px no-repeat;
+		}
+		.four .f_6 .wz{
+			color:#fff;
+		}
+		.footer{
+			height: 445px;
+			width: 100%;
+			background: #f2f2f2;
+			margin-top: 12px;
+		}
+		.footer .wrap{
+			width: 980px;
+			height: 422px;
+			font-size: 11px;
+		}
+		.footer .f_nav .top{
+			height: 276px;
+			padding: 40px 0 0 0;
+			text-align: left;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.footer ul.top a{
+			color: rgb(51, 51, 51);
+		}
+		.footer ul.top p{
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+		.footer ul.t_nav2 p{
+			margin-top: 24px;
+		}
+		.footer li{
+			margin-bottom: 8px;
+		}
+		.footer .f_copyright{
+			height: 56px;
+			padding: 34px 0 21px 0;
+		}
+		.footer .c_1{
+			color: rgb(136, 136, 136);
+			padding-bottom: 8px;
+			border-bottom: 0.8px solid rgb(214, 214, 214);
+		    margin-bottom:7px;
+		}
+		.footer .c_1 a{
+			color:rgb(0, 112, 201); 
+		}
+		.footer .c_2{
+			color: rgb(136, 136, 136);
+			
+		}
+		.footer .c_2 .wz{
+			margin: 0 30px 0 0;
+			float: left;
+		}
+		.footer .c_2 .link a{
+			color: rgb(85, 85, 85);
+			padding: 0 10px 0 10px;
+			border-right: 0.8px solid rgb(214, 214, 214);
+		}
+		.footer .c_2 .link a:last-child{
+			border-right:none;
+		}
+		.footer .china li{
+			float: right;
+		}
+		.footer .c_2{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.footer .icp,
+		.footer .icp a{
+			color: rgb(136, 136, 136);
+			margin:-20px 0 20px 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="wrap">
+		<div class="adv">&lt广告&gt</div>
+		</div>
+	</div>
+	<div class="content">
+
+	<div class="nav">
+		<div class="wrap">
+		<ul class="nav2">
+			<li><a href="#"><i class="iconfont icon-fisocialapple"></i></a></li>
+			<li><a href="#">Mac</a></li>
+			<li><a href="#">iPad</a></li>
+			<li><a href="#">iPone</a></li>
+			<li><a href="#">Watch</a></li>
+			<li><a href="#">Music</a></li>
+			<li><a href="#">技术支持</a></li>
+			<li><a href="#"><i class="iconfont icon-search"></i></a></li>
+			<li><a href="#"><i class="iconfont icon-weibiaoti-"></i></a></li>
+		</ul>
+		</div>
+	</div>
+	<div class="one">
+		<div class="wrap">
+			<div class="wz">
+				<h2>iPhone X</h2>
+				<h3>hello，未来。</h3>
+			</div>
+			<div class="link">
+				<a href="#">进一步了解</a>&nbsp&gt
+				<a href="#">购买</a>&nbsp&gt
+			</div>
+			<div class="bj"></div>
+		</div>
+	</div>
+	<div class="two">
+		<div class="wrap">
+			<div class="wz">
+				<h2>iPad</h2>
+				<h3>这个电脑，拿掉了电脑的条条框框。</h3>
+			</div>
+			<div class="link">
+				<a href="#">进一步了解</a>&nbsp&gt
+				<a href="#">购买</a>&nbsp&gt
+			</div>
+			<div class="bj"></div>
+		</div>
+	</div>
+	<div class="three">
+		<div class="wrap">
+			<div class="wz">
+				<h2>MacBook Pro</h2>
+				<h3>更强劲，更专业的强劲。</h3>
+			</div>
+			<div class="link">
+				<a href="#">进一步了解</a>&nbsp&gt
+				<a href="#">购买</a>&nbsp&gt
+			</div>
+			<div class="bj"></div>
+		</div>
+	</div>
+	<div class="four">
+	<ul class="kuang">
+		<li class="f_1">
+		<div class="wrap">
+			<div class="bj">
+		    <div class="wz">
+		    <h4 class="wz_1">暑期热点呈献</h4>
+		    <h5 class="wz_2">为高校生活购买 Mac 或 iPad Pro，Beats 耳机搭配其中。</h5></div>
+			</div>
+		</div>
+		</li>
+		<li class="f_2">
+		<div class="wrap">
+			<div class="bj">
+			 <div class="wz">
+		    <h4 class="wz_1">敬 Mac 背后的你</h4>
+		    <div class="link">
+		        <a href="#">观看影片 <i class="iconfont icon-iconset0481"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a href="#">探索 Mac</a>&nbsp&gt
+				</div>
+			</div>
+		</div>
+		</li>
+		<li class="f_3">
+		<div class="wrap">
+			<div class="bj">
+			 <div class="wz">
+		    <h4 class="wz_1">激发你的强大</h4>
+		    <h5 class="wz_2">iPhone X 配备 A11 仿生。</h5>
+		    <div class="link">
+		        <a href="#">观看影片 <i class="iconfont icon-iconset0481"></i></a>
+				</div>
+			</div>	
+		</div>
+		</li>
+		<li class="f_4">
+		<div class="wrap">
+			<div class="bj">
+				 <div class="wz">
+		    <h4 class="wz_1">iPhone 8</h4>
+		    <h5 class="wz_2">&nbsp&nbsp新一代 iPhone。</h5>
+		    <div class="link">
+		        <a href="#">进一步了解</a>&nbsp&gt&nbsp&nbsp&nbsp&nbsp
+				<a href="#">购买</a>&nbsp&gt
+				</div>
+				</div>
+			</div>
+		</div>
+		</li>
+		<li class="f_5">
+		<div class="wrap">
+			<div class="bj">
+				 <div class="wz">
+		   <h4 class="wz_1">iPhone 年年焕新计划</h4>
+		    <h5 class="wz_2">每年都有一部新 iPhone，<br>并享受 AppleCare+ 全方位服务计划。</h5></div>
+			</div>
+		</div>
+		</li>
+		<li class="f_6">
+		<div class="wrap">
+			<div class="bj">
+				 <div class="wz">
+		   <h4 class="wz_1">三个圆环,圆一个目标。</h4>
+		    <h5 class="wz_2">了解如何填满 Apple Watch 的<br>健身记录圆环。</h5></div>
+			</div>
+		</div>
+		</li>
+	</ul>
+	</div>	
+	<div class="footer">
+	<div class="wrap">
+		<div class="f_nav">
+			<ul class="top">
+				<li><p>选购及了解</p>
+				<ul class="t_nav">
+					<li><a href="#">Mac</a></li>
+					<li><a href="#">iPad</a></li>
+					<li><a href="#">iPhone</a></li>
+					<li><a href="#">Watch</a></li>
+					<li><a href="#">Music</a></li>
+					<li><a href="#">iTunes</a></li>
+					<li><a href="#">iPod touch</a></li>
+					<li><a href="#">配件</a></li>
+					<li><a href="#">App Store 充值卡</a></li>
+				</ul>
+				</li>
+				<li><p>Apple Store 商店</p>
+				<ul class="t_nav1">
+					<li><a href="#">查找零售店</a></li>
+					<li><a href="#">Genius Bar 天才吧</a></li>
+					<li><a href="#">Today at Apple</a></li>
+					<li><a href="#">Apple 夏令营</a></li>
+					<li><a href="#">Field Trip 课外活动</a></li>
+					<li><a href="#">Apple Store App</a></li>
+					<li><a href="#">翻新和优惠</a></li>
+					<li><a href="#">分期付款</a></li>
+					<li><a href="#">Apple GiveBack 回馈计划</a></li>
+					<li><a href="#">订单状态</a></li>
+					<li><a href="#">选购帮助</a></li>
+				</ul>
+				</li>
+				<li><p>教育应用</p>
+
+				<ul class="t_nav2">
+					<li><a href="#">Apple 与教育</a></li>
+					<li><a href="#">高校师生选购</a></li>
+					<p>商务应用</p>
+					<li><a href="#">Apple 与商务</a></li>
+					<li><a href="#">商务选购</a></li>
+				</ul>
+				</li>
+				<li><p>账户</p>
+				<ul class="t_nav2">
+					<li><a href="#">管理你的 Apple ID</a></li>
+					<li><a href="#">Apple Store 账户</a></li>
+					<li><a href="#"> iCloud.com</a></li>
+					<p>Apple 价值观</p>
+					<li><a href="#">辅助功能</a></li>
+					<li><a href="#">环境责任</a></li>
+					<li><a href="#">隐私</a></li>
+					<li><a href="#"> 供应商责任</a></li>
+				</ul>
+				</li>
+				<li><p>关于 Apple</p>
+				<ul class="t_nav1">
+					<li><a href="#">Newsroom</a></li>
+					<li><a href="#">Apple 管理层</a></li>
+					<li><a href="#">工作机会</a></li>
+					<li><a href="#">创造就业</a></li>
+					<li><a href="#">活动</a></li>
+					<li><a href="#">联系 Apple</a></li>
+				</ul>
+				</li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="f_copyright">
+			<div class="c_1">
+			更多选购方式：前往<span><a href="">Apple Store 零售店</a> </span>，致电 400-666-8800 或查找在你附近的
+			<span><a href="">授权经销商</a></span>。	
+			</div>
+			<div class="c_2">
+			<div class="wz">Copyright © 2018Apple Inc. 保留所有权利。</div>
+			<div class="china">
+			<ul>
+				<li>中国</li>
+				<li><a href="#"><img src="./images/中国.png" alt="中国"></li>
+			</ul>
+			</div>
+			<div class="link">
+				<a href="">隐私政策</a>
+				<a href="">使用条款</a>
+				<a href="">销售政策</a>
+				<a href="">法律信息</a>
+				<a href="">网站地图</a>
+			</div>
+			</div>
+		</div>
+        <div class="icp">京公安网安备 11010502008968 <a href="#">京ICP备10214630</a></div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
+
+
+
+
